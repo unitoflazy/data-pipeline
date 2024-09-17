@@ -1,8 +1,8 @@
 # Running the project 
 
-1. Put the secret (.env files) in the project folder
+1. Put the 2 .env files in the project folder
 2. Run `./start.sh`
-3. Restart `data-pipeline-app-1` if its fail
+3. Restart `data-pipeline-app-1` container if its fail
 
 # API
 

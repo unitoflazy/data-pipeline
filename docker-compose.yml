@@ -1,0 +1,29 @@
+
+services:
+  rabbitmq-asyncqueue:
+    image: rabbitmq:latest
+    container_name: rabbitmq-asyncqueue
+    ports:
+      - "5672:5672"
+    env_file:
+      - rabbitmq.env
+    volumes:
+      - rabbitmq_data1:/var/lib/rabbitmq
+
+  app:
+    depends_on:
+      - rabbitmq-asyncqueue
+    build:
+      context: .
+      dockerfile: cmd/Dockerfile
+    ports:
+      - "8088:8088"
+    volumes:
+      - logs:/root/logs
+    env_file:
+      - rabbitmq.env
+      - app.env
+
+volumes:
+  rabbitmq_data1:
+  logs:

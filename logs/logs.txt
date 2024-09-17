@@ -1,0 +1,1 @@
+[90m4:25AM[0m [32mINF[0m [1mcmd/main.go:9[0m[36m >[0m [1mHello, World![0m
